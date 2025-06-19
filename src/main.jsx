@@ -2,14 +2,19 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
+// ⬇️ Styles
+import './index.css';
+
+// ⬇️ Layouts
+import AppLayoutBasic from './AppLayoutBasic.jsx';
+import AppLayoutWithNavbar from './AppLayoutWithNavbar.jsx';
+
+// ⬇️ Pages
 import WelcomeScreen from './welcomeScreen.jsx';
 import Login from './login.jsx';
 import Home from './home.jsx';
-
-import AppLayoutWithNavbar from './AppLayoutWithNavbar.jsx';
-import AppLayoutBasic from './AppLayoutBasic.jsx';
-
-import './index.css';
+import Settings from './settings.jsx';
+import Test from './test.jsx';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
@@ -39,6 +44,22 @@ ReactDOM.createRoot(document.getElementById('root')).render(
           element={
             <AppLayoutWithNavbar>
               <Home />
+            </AppLayoutWithNavbar>
+          }
+        />
+        <Route
+          path="/settings"
+          element={
+            <AppLayoutWithNavbar>
+              <Settings />
+            </AppLayoutWithNavbar>
+          }
+        />
+        <Route
+          path="/test"
+          element={
+            <AppLayoutWithNavbar>
+              <Test />
             </AppLayoutWithNavbar>
           }
         />

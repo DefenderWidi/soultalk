@@ -17,3 +17,12 @@ body,
     -1px  1px 0 #000,
      1px  1px 0 #000;
 }
+
+/* Tambahkan ini ke global.css atau tailwind config */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none; /* IE/Edge */
+  scrollbar-width: none; /* Firefox */
+}
