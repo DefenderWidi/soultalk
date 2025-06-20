@@ -1,8 +1,10 @@
 import React, { useRef } from "react";
 import Header from "./header";
+import { useNavigate } from "react-router-dom";
 
 export default function Test() {
   const scrollRef = useRef(null);
+  const navigate = useNavigate();
 
   return (
     <div className="min-h-screen bg-[#c9e2ea] pb-24">
@@ -31,9 +33,12 @@ export default function Test() {
               <h2 className="text-lg font-extrabold text-yellow-600 stroke-text mb-1">
                 Tes Stress
               </h2>
-              <button className="bg-yellow-300 text-black px-4 py-1 text-xs rounded-full font-bold shadow mb-1 flex items-center gap-1">
-                Ambil Tes <span className="text-lg">➔</span>
-              </button>
+             <button
+  onClick={() => navigate("/test-stress")}
+  className="bg-yellow-300 text-black px-4 py-1 text-xs rounded-full font-bold shadow mb-1 flex items-center gap-1"
+>
+  Ambil Tes <span className="text-lg">➔</span>
+</button>
               <p className="text-[11px] text-gray-700">
                 Cek kesehatan mentalmu, langkah awal memahami diri.
               </p>

@@ -15,6 +15,7 @@ import Login from './login.jsx';
 import Home from './home.jsx';
 import Settings from './settings.jsx';
 import Test from './test.jsx';
+import Teststress from './test-stress.jsx';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
@@ -60,6 +61,14 @@ ReactDOM.createRoot(document.getElementById('root')).render(
           element={
             <AppLayoutWithNavbar>
               <Test />
+            </AppLayoutWithNavbar>
+          }
+        />
+          <Route
+          path="/test-stress"
+          element={
+            <AppLayoutWithNavbar>
+              <Teststress />
             </AppLayoutWithNavbar>
           }
         />
