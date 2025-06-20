@@ -1,30 +1,34 @@
 import React, { useState } from 'react';
-import Header from './header'; // Panggil header global
+import Header from './header';
 
 const moods = {
   happy: {
     emoji: '😄',
     color: '#f9e000',
     label: 'Bahagia',
-    advice: 'Hari ini cerah! Pertahankan semangat positifmu ya!'
+    advice: 'Hari ini cerah! Pertahankan semangat positifmu ya!',
+    funNote: 'Semangat, kamu kece! 💛'
   },
   neutral: {
     emoji: '😐',
     color: '#d6c8ff',
     label: 'Netral',
-    advice: 'Jalani hari dengan tenang, jangan terlalu keras pada dirimu.'
+    advice: 'Jalani hari dengan tenang, jangan terlalu keras pada dirimu.',
+    funNote: 'Tenang aja, semua bakal baik-baik aja.'
   },
   stress: {
     emoji: '😣',
     color: '#fbb7b7',
     label: 'Stres',
-    advice: 'Napasss... Istirahat dulu. Kamu butuh ruang untuk tenang.'
+    advice: 'Napasss... Istirahat dulu. Kamu butuh ruang untuk tenang.',
+    funNote: 'Tarik napas... buang pelan-pelan~'
   },
   tertekan: {
     emoji: '😭',
     color: '#d9b0ff',
     label: 'Tertekan',
-    advice: 'Berat ya. Cerita ke seseorang bisa bantu banget lho.'
+    advice: 'Berat ya. Cerita ke seseorang bisa bantu banget lho.',
+    funNote: 'Dipeluk virtual dulu 🤗'
   }
 };
 
@@ -32,7 +36,7 @@ const moodKeys = Object.keys(moods);
 
 export default function Profile() {
   const [selectedMood, setSelectedMood] = useState('neutral');
-  const { emoji, color, label, advice } = moods[selectedMood];
+  const { emoji, color, label, advice, funNote } = moods[selectedMood];
 
   const handleMoodClick = (moodKey) => {
     setSelectedMood(moodKey);
@@ -51,12 +55,13 @@ export default function Profile() {
         {/* Lingkaran Mood */}
         <div className="relative mx-auto my-6 w-56 h-56">
           <div
-            className="absolute inset-0 rounded-full border-[14px]"
+            className="absolute inset-0 rounded-full border-[14px] animate-pulse"
             style={{ borderColor: color }}
           ></div>
           <div className="absolute inset-8 rounded-full bg-white flex flex-col items-center justify-center text-center">
-            <div className="text-4xl">{emoji}</div>
-            <p className="text-sm text-black font-bold mt-2">{label}</p>
+            <div className="text-[64px]">{emoji}</div>
+            <p className="text-[13px] text-black font-bold mt-1">{label}</p>
+            <p className="text-xs mt-1 text-gray-500">{funNote}</p>
           </div>
         </div>
 
@@ -66,7 +71,7 @@ export default function Profile() {
             <button
               key={key}
               onClick={() => handleMoodClick(key)}
-              className={`text-2xl transition-transform active:scale-110 ${
+              className={`text-[30px] transition-transform active:scale-110 ${
                 key === selectedMood ? 'scale-110' : ''
               }`}
             >
