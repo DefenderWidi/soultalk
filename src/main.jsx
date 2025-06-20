@@ -16,6 +16,8 @@ import Home from './home.jsx';
 import Settings from './settings.jsx';
 import Test from './test.jsx';
 import Teststress from './test-stress.jsx';
+import Psikiater from './psikiater.jsx';
+import Psikolog from './psikolog.jsx';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
@@ -72,6 +74,22 @@ ReactDOM.createRoot(document.getElementById('root')).render(
             </AppLayoutWithNavbar>
           }
         />
+        <Route
+  path="/psikiater"
+  element={
+    <AppLayoutWithNavbar>
+      <Psikiater />
+    </AppLayoutWithNavbar>
+  }
+/>
+<Route
+  path="/psikolog"
+  element={
+    <AppLayoutWithNavbar>
+      <Psikolog />
+    </AppLayoutWithNavbar>
+  }
+/>
       </Routes>
     </BrowserRouter>
   </React.StrictMode>

@@ -202,29 +202,35 @@ function Home() {
   <p className="text-lg font-extrabold stroke-text">Pahami perbedaan antar Ahli</p>
 </div>
 
-{/* Kartu Psikiater */}
-<div className="bg-white rounded-2xl px-4 py-3 mb-4 shadow-md flex items-center justify-between gap-4">
-  <div className="flex items-center gap-4">
-    <img src="/psikiater.png" alt="Psikiater" className="w-20 h-20 object-contain" />
-    <div>
-      <h4 className="text-lg font-bold stroke-text text-yellow-400">Pilih Psikiater</h4>
-      <p className="text-sm text-black font-medium">Konsultasi intensif dan resep obat</p>
-    </div>
-  </div>
-  <div className="text-black text-2xl font-bold">{`>`}</div>
-</div>
+  {/* Kartu Psikiater */}
+      <div
+        onClick={() => navigate("/psikiater")}
+        className="bg-white rounded-2xl px-4 py-3 mb-4 shadow-md flex items-center justify-between gap-4 cursor-pointer hover:bg-gray-100 transition"
+      >
+        <div className="flex items-center gap-4">
+          <img src="/psikiater.png" alt="Psikiater" className="w-20 h-20 object-contain" />
+          <div>
+            <h4 className="text-lg font-bold stroke-text text-yellow-400">Pilih Psikiater</h4>
+            <p className="text-sm text-black font-medium">Konsultasi intensif dan resep obat</p>
+          </div>
+        </div>
+        <div className="text-black text-2xl font-bold">{`>`}</div>
+      </div>
 
-{/* Kartu Psikolog */}
-<div className="bg-white rounded-2xl px-4 py-3 mb-10 shadow-md flex items-center justify-between gap-4">
-  <div className="flex items-center gap-4">
-    <img src="/psikolog.png" alt="Psikolog" className="w-20 h-20 object-contain" />
-    <div>
-      <h4 className="text-lg font-bold stroke-text text-yellow-400">Pilih Psikolog</h4>
-      <p className="text-sm text-black font-medium">Konsultasi psikologi dan konseling</p>
-    </div>
-  </div>
-  <div className="text-black text-2xl font-bold">{`>`}</div>
-</div>
+      {/* Kartu Psikolog */}
+      <div
+        onClick={() => navigate("/psikolog")}
+        className="bg-white rounded-2xl px-4 py-3 mb-10 shadow-md flex items-center justify-between gap-4 cursor-pointer hover:bg-gray-100 transition"
+      >
+        <div className="flex items-center gap-4">
+          <img src="/psikolog.png" alt="Psikolog" className="w-20 h-20 object-contain" />
+          <div>
+            <h4 className="text-lg font-bold stroke-text text-yellow-400">Pilih Psikolog</h4>
+            <p className="text-sm text-black font-medium">Konsultasi psikologi dan konseling</p>
+          </div>
+        </div>
+        <div className="text-black text-2xl font-bold">{`>`}</div>
+      </div>
 
 {/* Komunikasi Pilihanmu */}
 <div className="mt-6 mb-10">
