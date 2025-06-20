@@ -18,6 +18,7 @@ import Test from './test.jsx';
 import Teststress from './test-stress.jsx';
 import Psikiater from './psikiater.jsx';
 import Psikolog from './psikolog.jsx';
+import Profile from './profile.jsx';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
@@ -87,6 +88,14 @@ ReactDOM.createRoot(document.getElementById('root')).render(
   element={
     <AppLayoutWithNavbar>
       <Psikolog />
+    </AppLayoutWithNavbar>
+  }
+/>
+<Route
+  path="/profil"
+  element={
+    <AppLayoutWithNavbar>
+      <Profile />
     </AppLayoutWithNavbar>
   }
 />

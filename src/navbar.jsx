@@ -29,6 +29,7 @@ function Navbar() {
       </button>
 
       {/* Profil */}
+     {/* Profil */}
       <button onClick={() => navigate("/profil")} className="flex flex-col items-center gap-1">
         <User className="w-5 h-5 text-purple-700" />
         <span>Profil</span>
